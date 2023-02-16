@@ -1,14 +1,17 @@
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
-No requirements.
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >1.1.0 |
+| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | 3.43.0 |
+| <a name="requirement_http"></a> [http](#requirement\_http) | 3.2.1 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | n/a |
-| <a name="provider_http"></a> [http](#provider\_http) | n/a |
+| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | 3.43.0 |
 
 ## Modules
 
@@ -18,41 +21,39 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [azurerm_network_security_group.f5-xc-nsg](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_security_group) | resource |
-| [azurerm_network_security_group.f5-xc-peer-nsg](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_security_group) | resource |
-| [azurerm_network_security_rule.allow_dns](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_security_rule) | resource |
-| [azurerm_network_security_rule.allow_dns2](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_security_rule) | resource |
-| [azurerm_network_security_rule.allow_http](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_security_rule) | resource |
-| [azurerm_network_security_rule.allow_ipsec](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_security_rule) | resource |
-| [azurerm_network_security_rule.block_dns](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_security_rule) | resource |
-| [azurerm_network_security_rule.f5-xc-nsg-rule](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_security_rule) | resource |
-| [azurerm_network_security_rule.f5-xc-nsg-rule2](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_security_rule) | resource |
-| [azurerm_network_security_rule.f5-xc-peer-nsg-rule](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_security_rule) | resource |
-| [azurerm_network_security_rule.f5-xc-peer-nsg-rule2](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_security_rule) | resource |
-| [azurerm_resource_group.rg](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group) | resource |
-| [azurerm_route_table.workload](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/route_table) | resource |
-| [azurerm_route_table.workload-peer](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/route_table) | resource |
-| [azurerm_subnet.external](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/subnet) | resource |
-| [azurerm_subnet.external-peer](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/subnet) | resource |
-| [azurerm_subnet.internal](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/subnet) | resource |
-| [azurerm_subnet.internal-peer](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/subnet) | resource |
-| [azurerm_subnet.workload](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/subnet) | resource |
-| [azurerm_subnet.workload-peer](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/subnet) | resource |
-| [azurerm_subnet_network_security_group_association.f5-xc](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/subnet_network_security_group_association) | resource |
-| [azurerm_subnet_network_security_group_association.f5-xc-peer](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/subnet_network_security_group_association) | resource |
-| [azurerm_subnet_route_table_association.workload](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/subnet_route_table_association) | resource |
-| [azurerm_subnet_route_table_association.workload-peer](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/subnet_route_table_association) | resource |
-| [azurerm_virtual_network.f5-xc-hub](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_network) | resource |
-| [azurerm_virtual_network.f5-xc-peer](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_network) | resource |
-| [azurerm_virtual_network_peering.toHub](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_network_peering) | resource |
-| [azurerm_virtual_network_peering.toPeer](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_network_peering) | resource |
-| [http_http.myip](https://registry.terraform.io/providers/hashicorp/http/latest/docs/data-sources/http) | data source |
+| [azurerm_network_security_group.f5-xc-nsg](https://registry.terraform.io/providers/hashicorp/azurerm/3.43.0/docs/resources/network_security_group) | resource |
+| [azurerm_network_security_group.f5-xc-peer-nsg](https://registry.terraform.io/providers/hashicorp/azurerm/3.43.0/docs/resources/network_security_group) | resource |
+| [azurerm_network_security_rule.allow_dns](https://registry.terraform.io/providers/hashicorp/azurerm/3.43.0/docs/resources/network_security_rule) | resource |
+| [azurerm_network_security_rule.allow_dns2](https://registry.terraform.io/providers/hashicorp/azurerm/3.43.0/docs/resources/network_security_rule) | resource |
+| [azurerm_network_security_rule.allow_http](https://registry.terraform.io/providers/hashicorp/azurerm/3.43.0/docs/resources/network_security_rule) | resource |
+| [azurerm_network_security_rule.allow_ipsec](https://registry.terraform.io/providers/hashicorp/azurerm/3.43.0/docs/resources/network_security_rule) | resource |
+| [azurerm_network_security_rule.block_dns](https://registry.terraform.io/providers/hashicorp/azurerm/3.43.0/docs/resources/network_security_rule) | resource |
+| [azurerm_network_security_rule.f5-xc-nsg-rule](https://registry.terraform.io/providers/hashicorp/azurerm/3.43.0/docs/resources/network_security_rule) | resource |
+| [azurerm_network_security_rule.f5-xc-nsg-rule2](https://registry.terraform.io/providers/hashicorp/azurerm/3.43.0/docs/resources/network_security_rule) | resource |
+| [azurerm_network_security_rule.f5-xc-peer-nsg-rule](https://registry.terraform.io/providers/hashicorp/azurerm/3.43.0/docs/resources/network_security_rule) | resource |
+| [azurerm_network_security_rule.f5-xc-peer-nsg-rule2](https://registry.terraform.io/providers/hashicorp/azurerm/3.43.0/docs/resources/network_security_rule) | resource |
+| [azurerm_resource_group.rg](https://registry.terraform.io/providers/hashicorp/azurerm/3.43.0/docs/resources/resource_group) | resource |
+| [azurerm_route_table.workload](https://registry.terraform.io/providers/hashicorp/azurerm/3.43.0/docs/resources/route_table) | resource |
+| [azurerm_route_table.workload-peer](https://registry.terraform.io/providers/hashicorp/azurerm/3.43.0/docs/resources/route_table) | resource |
+| [azurerm_subnet.external](https://registry.terraform.io/providers/hashicorp/azurerm/3.43.0/docs/resources/subnet) | resource |
+| [azurerm_subnet.external-peer](https://registry.terraform.io/providers/hashicorp/azurerm/3.43.0/docs/resources/subnet) | resource |
+| [azurerm_subnet.internal](https://registry.terraform.io/providers/hashicorp/azurerm/3.43.0/docs/resources/subnet) | resource |
+| [azurerm_subnet.internal-peer](https://registry.terraform.io/providers/hashicorp/azurerm/3.43.0/docs/resources/subnet) | resource |
+| [azurerm_subnet.workload](https://registry.terraform.io/providers/hashicorp/azurerm/3.43.0/docs/resources/subnet) | resource |
+| [azurerm_subnet.workload-peer](https://registry.terraform.io/providers/hashicorp/azurerm/3.43.0/docs/resources/subnet) | resource |
+| [azurerm_subnet_network_security_group_association.f5-xc](https://registry.terraform.io/providers/hashicorp/azurerm/3.43.0/docs/resources/subnet_network_security_group_association) | resource |
+| [azurerm_subnet_network_security_group_association.f5-xc-peer](https://registry.terraform.io/providers/hashicorp/azurerm/3.43.0/docs/resources/subnet_network_security_group_association) | resource |
+| [azurerm_subnet_route_table_association.workload](https://registry.terraform.io/providers/hashicorp/azurerm/3.43.0/docs/resources/subnet_route_table_association) | resource |
+| [azurerm_subnet_route_table_association.workload-peer](https://registry.terraform.io/providers/hashicorp/azurerm/3.43.0/docs/resources/subnet_route_table_association) | resource |
+| [azurerm_virtual_network.f5-xc-hub](https://registry.terraform.io/providers/hashicorp/azurerm/3.43.0/docs/resources/virtual_network) | resource |
+| [azurerm_virtual_network.f5-xc-peer](https://registry.terraform.io/providers/hashicorp/azurerm/3.43.0/docs/resources/virtual_network) | resource |
+| [azurerm_virtual_network_peering.toHub](https://registry.terraform.io/providers/hashicorp/azurerm/3.43.0/docs/resources/virtual_network_peering) | resource |
+| [azurerm_virtual_network_peering.toPeer](https://registry.terraform.io/providers/hashicorp/azurerm/3.43.0/docs/resources/virtual_network_peering) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_auto_trust_localip"></a> [auto\_trust\_localip](#input\_auto\_trust\_localip) | if true, query ifconfig.io for public ip of terraform host. | `bool` | `false` | no |
 | <a name="input_azureRegion"></a> [azureRegion](#input\_azureRegion) | target azure region | `string` | n/a | yes |
 | <a name="input_buildSuffix"></a> [buildSuffix](#input\_buildSuffix) | random build suffix for resources | `string` | `null` | no |
 | <a name="input_projectPrefix"></a> [projectPrefix](#input\_projectPrefix) | projectPrefix name for tagging | `string` | n/a | yes |
