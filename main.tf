@@ -8,15 +8,15 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "rg" {
-  name = format("%s-%s-%s",var.projectPrefix,var.resourceGroup,var.buildSuffix)
-  location = var.azureRegion
+  name = format("%s-%s-%s",var.project_prefix,var.resource_group,var.instance_suffix)
+  location = var.azure_region
 }
 
 
 resource "azurerm_network_security_group" "f5-xc-nsg" {
   name                = "f5_xc_nsg"
   resource_group_name = azurerm_resource_group.rg.name
-  location            = var.azureRegion
+  location            = var.azure_region
 }
 
 
@@ -125,8 +125,8 @@ resource "azurerm_network_security_rule" "allow_http" {
 
 resource "azurerm_virtual_network" "f5-xc-hub" {
   name                = "f5_xc_hub_vnet"
-  location            = var.azureRegion
-  address_space       = [var.servicesVnetAddressSpace]
+  location            = var.azure_region
+  address_space       = [var.services_vnet_address_space]
   resource_group_name = azurerm_resource_group.rg.name
 }
 
@@ -135,26 +135,26 @@ resource "azurerm_subnet" "external" {
   name                 = "external_subnet"
   virtual_network_name = azurerm_virtual_network.f5-xc-hub.name
   resource_group_name  = azurerm_resource_group.rg.name
-  address_prefixes     = [var.servicesVnetExternalSubnet]
+  address_prefixes     = [var.services_vnet_external_subnet]
 }
 
 resource "azurerm_subnet" "internal" {
   name                 = "internal_subnet"
   virtual_network_name = azurerm_virtual_network.f5-xc-hub.name
   resource_group_name  = azurerm_resource_group.rg.name
-  address_prefixes     = [var.servicesVnetInternalSubnet]
+  address_prefixes     = [var.services_vnet_internal_subnet]
 }
 
 resource "azurerm_subnet" "workload" {
   name                 = "workload_subnet"
   virtual_network_name = azurerm_virtual_network.f5-xc-hub.name
   resource_group_name  = azurerm_resource_group.rg.name
-  address_prefixes     = [var.servicesVnetWorkloadSubnet]
+  address_prefixes     = [var.services_vnet_workload_subnet]
 }
 
 resource "azurerm_route_table" "workload" {
   name                = "workload_rt"
-  location            = var.azureRegion
+  location            = var.azure_region
   resource_group_name = azurerm_resource_group.rg.name
 }
 

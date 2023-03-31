@@ -1,15 +1,15 @@
-output projectPrefix {
-  value = var.projectPrefix
+output project_prefix {
+  value = var.project_prefix
 }
-output azureRegion {
-  value = var.azureRegion
+output azure_region {
+  value = var.azure_region
 }
-output resourceGroup {
+output resource_group {
   value =  azurerm_resource_group.rg.name
 }
-output hubVnetName {
+output hub_vnet_name {
   value = azurerm_virtual_network.f5-xc-hub.name
 }
-output workloadSubnet {
+output workload_subnet {
   value = azurerm_subnet.workload-peer.id
 }
