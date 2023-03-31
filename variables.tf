@@ -24,7 +24,7 @@ variable "trusted_ip" {
   description = "IP address of trusted source for mgmt/testing"
   default     = "192.0.2.10/32"
 }
-variable "services_vnet_addressSpace" {
+variable "services_vnet_address_space" {
   type    = string
   default = "100.64.16.0/20"
 }

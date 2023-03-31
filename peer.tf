@@ -40,7 +40,7 @@ resource "azurerm_network_security_rule" "f5-xc-peer-nsg-rule2" {
 resource "azurerm_virtual_network" "f5-xc-peer" {
   name                = "f5_xc_spoke_vnet"
   location            = var.azure_region
-  address_space       = [var.spokeVnetAddressSpace]
+  address_space       = [var.spoke_vnet_address_space]
   resource_group_name = azurerm_resource_group.rg.name
 }
 
@@ -49,21 +49,21 @@ resource "azurerm_subnet" "external-peer" {
   name                 = "external_subnet"
   virtual_network_name = azurerm_virtual_network.f5-xc-peer.name
   resource_group_name  = azurerm_resource_group.rg.name
-  address_prefixes     = [var.spokeVnetExternalSubnet]
+  address_prefixes     = [var.spoke_vnet_external_subnet]
 }
 
 resource "azurerm_subnet" "internal-peer" {
   name                 = "internal_subnet"
   virtual_network_name = azurerm_virtual_network.f5-xc-peer.name
   resource_group_name  = azurerm_resource_group.rg.name
-  address_prefixes     = [var.spokeVnetInternalSubnet]
+  address_prefixes     = [var.spoke_vnet_internal_subnet]
 }
 
 resource "azurerm_subnet" "workload-peer" {
   name                 = "workload_subnet"
   virtual_network_name = azurerm_virtual_network.f5-xc-peer.name
   resource_group_name  = azurerm_resource_group.rg.name
-  address_prefixes     = [var.spokeVnetWorkloadSubnet]
+  address_prefixes     = [var.spoke_vnet_workload_subnet]
 }
 
 resource "azurerm_route_table" "workload-peer" {
