@@ -58,7 +58,7 @@ No modules.
 | <a name="input_instance_suffix"></a> [instance\_suffix](#input\_instance\_suffix) | random suffix for resources | `string` | `null` | no |
 | <a name="input_project_prefix"></a> [project\_prefix](#input\_project\_prefix) | projectPrefix name for tagging | `string` | n/a | yes |
 | <a name="input_resource_group"></a> [resource\_group](#input\_resource\_group) | The name of the resource group in which the virtual networks are created | `string` | `"f5demo_rg"` | no |
-| <a name="input_services_vnet_addressSpace"></a> [services\_vnet\_addressSpace](#input\_services\_vnet\_addressSpace) | n/a | `string` | `"100.64.16.0/20"` | no |
+| <a name="input_services_vnet_address_space"></a> [services\_vnet\_address\_space](#input\_services\_vnet\_address\_space) | n/a | `string` | `"100.64.16.0/20"` | no |
 | <a name="input_services_vnet_external_subnet"></a> [services\_vnet\_external\_subnet](#input\_services\_vnet\_external\_subnet) | n/a | `string` | `"100.64.16.0/24"` | no |
 | <a name="input_services_vnet_internal_subnet"></a> [services\_vnet\_internal\_subnet](#input\_services\_vnet\_internal\_subnet) | n/a | `string` | `"100.64.17.0/24"` | no |
 | <a name="input_services_vnet_workload_subnet"></a> [services\_vnet\_workload\_subnet](#input\_services\_vnet\_workload\_subnet) | n/a | `string` | `"100.64.18.0/24"` | no |
